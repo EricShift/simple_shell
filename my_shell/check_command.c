@@ -9,7 +9,7 @@ int check_command(char *command)
 	int i = 0;
 	char *int_cmd[] = {"exit", "cd", "env", NULL};
 
-	while (command[])
+	while (command[i])
 	{
 		if (command[i] == '/')
 			return (EXTERNAL_CMD);

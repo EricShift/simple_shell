@@ -22,10 +22,10 @@ int main(int argc __attribute__((unused)), char **argv)
 
 		if (line == NULL)
 		{
-			if (isatty(STD_FILENO))
+			if (isatty(STDIN_FILENO))
 				break;
 		}
-		argc = tokenize(line, DELIM);
+		args = tokenize(line, DELIM);
 		cmd_type = check_command(args[0]);
 		shell_execute(args, cmd_type);
 	}

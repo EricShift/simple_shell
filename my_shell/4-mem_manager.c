@@ -12,10 +12,10 @@ void *_realloc(void *ptr, int old, int new)
 	int i, min;
 
 	if (!ptr)
-		return (malloc(new));
+		return (malloc (new));
 	else if (new == old)
 		return (ptr);
-	else if (new == 0 & ptr != NULL)
+	else if (new == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
