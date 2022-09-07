@@ -6,7 +6,7 @@
  * @av: the argument vector from main()
  * Return: 0 on success, 1 on error, or error code
  */
- int hsh(info_t *info, char **av)
+int hsh(info_t *info, char **av)
 {
 	ssize_t r = 0;
 	int builtin_ret = 0;
@@ -62,7 +62,7 @@ int find_builtin(info_t *info)
 		{"alias", _myalias},
 		{NULL, NULL}
 	};
-	
+
 	for (i = 0; builtintbl[i].type; i++)
 		if (_strcmp(info->argv[0], builtintbl[i].type) == 0)
 		{
